@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Support page for Korean Crossword by ENS Korea. Contact us for help with the app.">
+<meta name="robots" content="index, follow">
+<title>Support · Korean Crossword | ENS Korea</title>
+<style>
+  :root {
+    --indigo: #4338CA;
+    --indigo-dark: #2D2FA0;
+    --indigo-light: #EEF2FF;
+    --gray-900: #111827;
+    --gray-700: #374151;
+    --gray-500: #6B7280;
+    --gray-200: #E5E7EB;
+    --gray-50: #F9FAFB;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", Roboto, sans-serif;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--indigo) 0%, var(--indigo-dark) 100%);
+    color: var(--white);
+    padding: 48px 0 40px;
+    text-align: center;
+  }
+  .squirrel { font-size: 56px; line-height: 1; margin-bottom: 12px; }
+  header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+  header p { font-size: 16px; opacity: 0.9; }
+  .brand { font-size: 13px; opacity: 0.75; margin-top: 8px; letter-spacing: 0.5px; }
+  /* Language toggle */
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 24px 0 8px;
+  }
+  .lang-toggle button {
+    padding: 8px 18px;
+    border: 1.5px solid var(--gray-200);
+    background: var(--white);
+    color: var(--gray-700);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .lang-toggle button.active {
+    background: var(--indigo);
+    color: var(--white);
+    border-color: var(--indigo);
+  }
+  .lang-toggle button:hover:not(.active) { border-color: var(--indigo); color: var(--indigo); }
+  /* Sections */
+  section {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin: 16px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--gray-900);
+  }
+  section p { color: var(--gray-700); margin-bottom: 8px; }
+  /* Contact card */
+  .contact-card {
+    background: var(--indigo-light);
+    border: 1.5px solid var(--indigo);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .contact-card .label { font-size: 13px; color: var(--indigo-dark); font-weight: 600; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .contact-card a.email {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--indigo);
+    text-decoration: none;
+    word-break: break-all;
+    padding: 8px 0;
+  }
+  .contact-card a.email:hover { text-decoration: underline; }
+  .contact-card .response { font-size: 13px; color: var(--gray-500); margin-top: 8px; }
+  /* FAQ */
+  details {
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.15s;
+  }
+  details[open] { border-color: var(--indigo); }
+  summary {
+    padding: 14px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    color: var(--gray-900);
+    background: var(--white);
+    user-select: none;
+    position: relative;
+    padding-right: 40px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--indigo);
+    transition: transform 0.2s;
+  }
+  details[open] summary::after { content: "−"; }
+  details p {
+    padding: 4px 18px 16px;
+    color: var(--gray-700);
+    font-size: 15px;
+  }
+  /* Links list */
+  .links { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+  .links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    color: var(--gray-900);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.15s;
+  }
+  .links a:hover { border-color: var(--indigo); color: var(--indigo); }
+  .links a::after { content: "→"; color: var(--gray-500); font-size: 18px; }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 32px 20px 40px;
+    color: var(--gray-500);
+    font-size: 13px;
+  }
+  footer p { margin-bottom: 6px; }
+  /* Hide inactive language */
+  .lang-section { display: none; }
+  .lang-section.active { display: block; }
+  /* Mobile */
+  @media (max-width: 480px) {
+    header { padding: 36px 0 32px; }
+    .squirrel { font-size: 48px; }
+    header h1 { font-size: 22px; }
+    section { padding: 22px 18px; margin: 12px 0; }
+    section h2 { font-size: 18px; }
+    .contact-card a.email { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="squirrel" aria-hidden="true">🐿️</div>
+    <h1>Korean Crossword Support</h1>
+    <p>한국어 십자말풀이 고객지원</p>
+    <div class="brand">ENS Korea</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Language toggle -->
+  <div class="lang-toggle" role="tablist" aria-label="Language selector">
+    <button class="active" data-lang="en" role="tab" aria-selected="true">English</button>
+    <button data-lang="ko" role="tab" aria-selected="false">한국어</button>
+  </div>
+
+  <!-- ============ ENGLISH ============ -->
+  <div class="lang-section active" data-lang="en">
+
+    <section>
+      <h2>👋 Need help with Korean Crossword?</h2>
+      <p>We're a small team building Korean Crossword to help learners around the world enjoy the Korean language one puzzle at a time. If something isn't working or you have a suggestion, please reach out — we read every message.</p>
+    </section>
+
+    <div class="contact-card">
+      <div class="label">CONTACT US</div>
+      <a class="email" href="mailto:sugar729729@gmail.com">sugar729729@gmail.com</a>
+      <div class="response">We respond within 1–3 business days (KST).</div>
+    </div>
+
+    <section>
+      <h2>📋 Frequently Asked Questions</h2>
+
+      <details>
+        <summary>How do I earn and use acorns (도토리)?</summary>
+        <p>You earn acorns by completing puzzles (★1–★5 rating affects rewards) or by watching optional reward ads. Acorns are spent to unlock new puzzle bundles. There are no in-app purchases — the app is fully free.</p>
+      </details>
+
+      <details>
+        <summary>How do I change the hint language?</summary>
+        <p>Open Settings → Hint Language. Korean hints are always shown alongside your selected language. Currently 16 languages are available in addition to Korean: English, Chinese, Japanese, Spanish, Vietnamese, French, German, Italian, Indonesian, Thai, Portuguese, Arabic, Russian, Uzbek, Turkish, and Mongolian.</p>
+      </details>
+
+      <details>
+        <summary>Why are some puzzles locked?</summary>
+        <p>Bundles are not unlocked automatically. You choose which bundle you want to play and unlock it by spending a set number of acorns. Earn acorns by completing puzzles (★1–★5 rewards) or by watching optional reward ads from the acorn modal.</p>
+      </details>
+
+      <details>
+        <summary>I found an incorrect hint or typo. How do I report it?</summary>
+        <p>Please email us at <a href="mailto:sugar729729@gmail.com">sugar729729@gmail.com</a> with the puzzle number, the word, and the language. We update the dictionary regularly and your reports help everyone learn better.</p>
+      </details>
+
+      <details>
+        <summary>How often are new puzzles added?</summary>
+        <p>We add new puzzle bundles roughly every 1–2 months. Update the app to receive new content. The current version contains 640 puzzles across multiple difficulty types.</p>
+      </details>
+
+      <details>
+        <summary>Is my progress saved if I uninstall the app?</summary>
+        <p>Progress (acorns, unlocked bundles, completed puzzles, ★ ratings) is stored only on your device. Uninstalling the app or clearing its data will permanently delete all progress, and it cannot be restored. Cloud sync is on our roadmap, but until it ships, please keep this in mind before uninstalling.</p>
+      </details>
+
+      <details>
+        <summary>The app crashes or audio doesn't play. What can I do?</summary>
+        <p>1) Make sure you have the latest version installed. 2) Restart the app. 3) Restart your device. 4) If the issue persists, please email us with your device model, OS version, and a description of the problem.</p>
+      </details>
+
+      <details>
+        <summary>How do I leave feedback or rate the app?</summary>
+        <p>You can leave a review directly on the App Store or Google Play. Feedback helps us improve and reach more learners. Thank you!</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>🔗 Useful Links</h2>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.enskorea.koreancrossword" target="_blank" rel="noopener">Google Play Store</a>
+        <a href="#" onclick="return false;" aria-disabled="true" style="opacity:0.5;cursor:not-allowed;">Apple App Store (coming soon)</a>
+        <a href="./privacy.html">Privacy Policy</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ KOREAN ============ -->
+  <div class="lang-section" data-lang="ko">
+
+    <section>
+      <h2>👋 도움이 필요하신가요?</h2>
+      <p>저희는 전 세계 한국어 학습자가 퍼즐로 즐겁게 한국어를 익힐 수 있도록 한국어 십자말풀이를 만들고 있는 작은 팀입니다. 앱 사용 중 문제가 있거나 제안하실 점이 있다면 언제든지 연락 주세요. 모든 메시지를 직접 읽고 답변드립니다.</p>
+    </section>
+
+    <div class="contact-card">
+      <div class="label">문의 이메일</div>
+      <a class="email" href="mailto:sugar729729@gmail.com">sugar729729@gmail.com</a>
+      <div class="response">영업일 기준 1~3일 이내에 답변드립니다 (한국 시간 기준).</div>
+    </div>
+
+    <section>
+      <h2>📋 자주 묻는 질문</h2>
+
+      <details>
+        <summary>도토리는 어떻게 모으고 사용하나요?</summary>
+        <p>퍼즐을 풀면 도토리를 획득합니다 (★1~★5 평점에 따라 보상이 다릅니다). 또는 도토리 모달에서 보상형 광고를 시청해 추가로 받을 수 있습니다. 모은 도토리는 새로운 퍼즐 묶음을 잠금 해제하는 데 사용됩니다. 앱 내 결제는 일절 없으며 모든 콘텐츠는 무료입니다.</p>
+      </details>
+
+      <details>
+        <summary>힌트 언어를 어떻게 바꾸나요?</summary>
+        <p>설정 → 힌트 언어에서 변경할 수 있습니다. 한국어 힌트는 항상 함께 표시됩니다. 현재 한국어 외에 영어, 중국어, 일본어, 스페인어, 베트남어, 프랑스어, 독일어, 이탈리아어, 인도네시아어, 태국어, 포르투갈어, 아랍어, 러시아어, 우즈베크어, 터키어, 몽골어까지 총 16개 언어가 지원됩니다.</p>
+      </details>
+
+      <details>
+        <summary>일부 퍼즐이 잠겨 있는데 어떻게 푸나요?</summary>
+        <p>퍼즐 묶음은 자동으로 해제되지 않습니다. 원하는 묶음을 직접 선택해, 일정 개수의 도토리를 사용해 잠금 해제할 수 있습니다. 도토리는 퍼즐을 풀거나(★1~★5 평점 보상) 도토리 모달의 보상형 광고를 시청해 모을 수 있습니다.</p>
+      </details>
+
+      <details>
+        <summary>힌트가 어색하거나 오타가 있어요. 어디로 신고하나요?</summary>
+        <p><a href="mailto:sugar729729@gmail.com">sugar729729@gmail.com</a>로 퍼즐 번호 / 해당 단어 / 언어를 알려주세요. 사전을 정기적으로 업데이트하며, 제보해 주신 내용은 모든 학습자에게 도움이 됩니다.</p>
+      </details>
+
+      <details>
+        <summary>새 퍼즐은 얼마나 자주 추가되나요?</summary>
+        <p>약 1~2개월 주기로 새 퍼즐 묶음이 추가됩니다. 새 콘텐츠를 받으려면 앱을 최신 버전으로 업데이트해 주세요. 현재 버전에는 다양한 난이도의 640개 퍼즐이 수록되어 있습니다.</p>
+      </details>
+
+      <details>
+        <summary>앱을 삭제해도 진행 상황이 유지되나요?</summary>
+        <p>진행 상황(도토리, 잠금 해제한 묶음, 푼 퍼즐, ★평점)은 기기 내에만 저장됩니다. 앱을 삭제하거나 데이터를 지우면 모든 진행 상황이 영구적으로 삭제되며 복구할 수 없습니다. 클라우드 동기화는 향후 업데이트로 추가될 예정이며, 그 전까지는 삭제 시 신중하게 결정해 주세요.</p>
+      </details>
+
+      <details>
+        <summary>앱이 멈추거나 효과음이 나오지 않아요.</summary>
+        <p>1) 최신 버전이 설치되어 있는지 확인하세요. 2) 앱을 종료 후 재실행하세요. 3) 기기를 재부팅하세요. 4) 문제가 계속되면 기기 모델명, OS 버전, 증상을 적어 이메일로 보내주세요.</p>
+      </details>
+
+      <details>
+        <summary>피드백이나 평점은 어디에 남기나요?</summary>
+        <p>App Store 또는 Google Play에서 직접 리뷰를 작성하실 수 있습니다. 여러분의 피드백이 앱을 발전시키고 더 많은 학습자에게 닿게 합니다. 감사합니다!</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>🔗 관련 링크</h2>
+      <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.enskorea.koreancrossword" target="_blank" rel="noopener">Google Play 스토어</a>
+        <a href="#" onclick="return false;" aria-disabled="true" style="opacity:0.5;cursor:not-allowed;">Apple App Store (출시 예정)</a>
+        <a href="./privacy.html">개인정보처리방침</a>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>ENS Korea</strong> — Korean Crossword</p>
+  <p>Bundle ID: com.enskorea.koreancrossword</p>
+  <p>© 2026 ENS Korea. All rights reserved.</p>
+  <p style="margin-top:12px; font-size:12px;">Last updated: 2026-05-09</p>
+</footer>
+
+<script>
+  // Language toggle (no framework, accessible)
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      document.querySelectorAll('.lang-toggle button').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+        b.setAttribute('aria-selected', b.dataset.lang === lang ? 'true' : 'false');
+      });
+      document.querySelectorAll('.lang-section').forEach(s => {
+        s.classList.toggle('active', s.dataset.lang === lang);
+      });
+      document.documentElement.setAttribute('lang', lang);
+      // Save preference
+      try { localStorage.setItem('preferredLang', lang); } catch(e) {}
+    });
+  });
+  // Restore preference
+  try {
+    const saved = localStorage.getItem('preferredLang');
+    if (saved) {
+      const btn = document.querySelector(`.lang-toggle button[data-lang="${saved}"]`);
+      if (btn) btn.click();
+    } else if (navigator.language && navigator.language.startsWith('ko')) {
+      // Auto-detect Korean browser
+      document.querySelector('.lang-toggle button[data-lang="ko"]').click();
+    }
+  } catch(e) {}
+</script>
+
+</body>
+</html>
