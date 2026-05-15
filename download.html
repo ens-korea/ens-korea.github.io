@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한국어 십자말 퍼즐 — Download / Korean Crossword Puzzle</title>
+  <meta name="description" content="640 puzzles · 17 languages · Free on iOS &amp; Android">
+  <meta property="og:title" content="한국어 십자말 퍼즐">
+  <meta property="og:description" content="640 puzzles · 17 languages · Free on iOS &amp; Android">
+  <meta property="og:type" content="website">
+  <script>
+    (function() {
+      var APP_STORE_URL = 'https://apps.apple.com/app/id6768182894';
+      var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.enskorea.koreancrossword';
+      var ua = (navigator.userAgent || navigator.vendor || window.opera || '');
+
+      // iOS (iPhone/iPad/iPod) → App Store 자동 redirect
+      if (/iPhone|iPad|iPod/i.test(ua) && !window.MSStream) {
+        window.location.replace(APP_STORE_URL);
+        return;
+      }
+      // Android → Google Play 자동 redirect
+      if (/android/i.test(ua)) {
+        window.location.replace(PLAY_STORE_URL);
+        return;
+      }
+      // PC, 기타 → 페이지 그대로 표시 (선택 화면)
+    })();
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+      background: linear-gradient(135deg, #1A1B6E 0%, #4338CA 50%, #6366F1 100%);
+      color: #FFFFFF;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 24px;
+    }
+    .container {
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+    }
+    .emoji {
+      font-size: 64px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.3px;
+    }
+    .subtitle-en {
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.75;
+      margin: 0 0 4px 0;
+    }
+    .stats {
+      font-size: 13px;
+      opacity: 0.85;
+      margin: 0 0 36px 0;
+      font-weight: 500;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    /* Apple/Google 공식 배지 — 변형 금지, 비율 유지, 최소 여백 확보 */
+    .btn-store {
+      display: inline-block;
+      height: 56px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      text-decoration: none;
+    }
+    .btn-store:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+    .btn-store:active {
+      transform: translateY(0);
+    }
+    .btn-store img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 11px;
+      opacity: 0.55;
+    }
+    @media (max-width: 380px) {
+      h1 { font-size: 24px; }
+      .emoji { font-size: 56px; }
+      .btn-store { height: 50px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="emoji" aria-hidden="true">🧩</div>
+    <h1>한국어 십자말 퍼즐</h1>
+    <p class="subtitle-en">Korean Crossword Puzzle</p>
+    <p class="stats">640 puzzles · 17 languages</p>
+
+    <div class="btn-group">
+      <a class="btn-store" href="https://apps.apple.com/app/id6768182894" aria-label="Download on the App Store">
+        <img src="app-store-badge.svg" alt="Download on the App Store">
+      </a>
+      <a class="btn-store" href="https://play.google.com/store/apps/details?id=com.enskorea.koreancrossword" aria-label="Get it on Google Play">
+        <img src="google-play-badge.png" alt="Get it on Google Play">
+      </a>
+    </div>
+
+    <p class="footer">© 2026 ENS Korea</p>
+  </div>
+</body>
+</html>
