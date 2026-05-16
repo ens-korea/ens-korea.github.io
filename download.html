@@ -95,6 +95,10 @@
       height: auto;
       display: block;
     }
+    /* Google PNG의 사각 외곽 검정 픽셀 가림 — SVG에는 영향 없음 */
+    .btn-store img[src$=".png"] {
+      border-radius: 8px;
+    }
     .footer {
       margin-top: 40px;
       font-size: 11px;
