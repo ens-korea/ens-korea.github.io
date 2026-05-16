@@ -75,10 +75,11 @@
       align-items: center;
       gap: 14px;
     }
-    /* Apple/Google 공식 배지 — 변형 금지, 비율 유지, 최소 여백 확보 */
+    /* Apple/Google 공식 배지 — 변형 금지, 비율 유지, 너비 동일로 시각적 통일감 */
     .btn-store {
-      display: inline-block;
-      height: 56px;
+      display: block;
+      width: 240px;
+      margin: 0 auto;
       transition: transform 0.15s ease, opacity 0.15s ease;
       text-decoration: none;
     }
@@ -90,8 +91,8 @@
       transform: translateY(0);
     }
     .btn-store img {
-      height: 100%;
-      width: auto;
+      width: 100%;
+      height: auto;
       display: block;
     }
     .footer {
@@ -102,7 +103,7 @@
     @media (max-width: 380px) {
       h1 { font-size: 24px; }
       .emoji { font-size: 56px; }
-      .btn-store { height: 50px; }
+      .btn-store { width: 200px; }
     }
   </style>
 </head>
